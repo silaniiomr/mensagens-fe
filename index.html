@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma Palavra de Vida para o Seu Dia ✨</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .container {
+            padding: 25px;
+            max-width: 420px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin: 15px;
+        }
+        h1 {
+            color: #b45309;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .versiculo {
+            background-color: #fffbeb;
+            border-left: 4px solid #d97706;
+            padding: 15px;
+            margin: 15px 0 25px 0;
+            border-radius: 6px;
+            font-style: italic;
+            color: #374151;
+            font-size: 16px;
+            text-align: left;
+            line-height: 1.5;
+        }
+        p {
+            color: #4b5563;
+            font-size: 16px;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+        .botoes {
+            position: relative;
+            width: 100%;
+            height: 90px;
+        }
+        button {
+            font-size: 15px;
+            font-weight: bold;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btnSim {
+            background-color: #059669;
+            position: absolute;
+            left: calc(50% - 110px);
+        }
+        #btnNao {
+            background-color: #6b7280;
+            position: absolute;
+            left: calc(50% + 10px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Mensagem do Dia ☀️📖</h1>
+        
+        <div class="versiculo">
+            "Lâmpada para os meus pés é a tua palavra e luz para o meu caminho." <strong>- Salmos 119:105</strong>
+        </div>
+
+        <p>Deseja abrir o coração para receber e viver os ensinamentos de Jesus hoje?</p>
+        
+        <div class="botoes">
+            <button id="btnSim" onclick="aceitou()">Quero sim! 🙌</button>
+            <button id="btnNao" onmouseover="fugir()" ontouchstart="fugir()">Ainda não</button>
+        </div>
+    </div>
+
+    <script>
+        function aceitou() {
+            alert("Amém! Que a paz e a direção de Deus estejam com você em cada passo de hoje. Compartilhe essa luz com alguém! ❤️");
+            location.reload();
+        }
+
+        function fugir() {
+            const btnNao = document.getElementById('btnNao');
+            const larguraJanela = window.innerWidth - 120;
+            const alturaJanela = window.innerHeight - 120;
+            
+            const randomX = Math.random() * larguraJanela;
+            const randomY = Math.random() * alturaJanela;
+            
+            btnNao.style.position = 'fixed';
+            btnNao.style.left = randomX + 'px';
+            btnNao.style.top = randomY + 'px';
+        }
+    </script>
+</body>
+</html>
